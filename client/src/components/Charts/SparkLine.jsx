@@ -1,4 +1,4 @@
-import React, {memo} from "react";
+import React, { memo } from "react";
 import {
   SparklineComponent,
   Inject,
@@ -17,6 +17,8 @@ const SparkLine = ({ id, height, width, color, data, type, currentColor }) => {
       border={{ color: currentColor, width: 2 }}
       tooltipSettings={{
         visible: true,
+        // eslint-disable-next-line
+        format: "${x} : data ${yval}",
         trackLineSettings: {
           visible: true,
         },
